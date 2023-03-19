@@ -8,27 +8,43 @@
         li.signup-inactive(:class="{'signup-active' : !signIn}" @click="signIn = false")
           a.btn Sign up 
     div(ng-app="", ng-init="checked = false")
-      form.form-signin(:class="{'form-signin-left': !signIn}" action="", method="post", name="form")
-        label(for="username") Username
-        input.form-styling(type="text", name="username", placeholder="")
-        label(for="password") Password
-        input.form-styling(type="text", name="password", placeholder="")
+      //- FIRST FORM
+      form.form-signin(
+        :class="{'form-signin-left': !signIn}", 
+        name="form",
+        @submit.prevent="submitSignInForm")
+        label Username
+        input.form-styling(type="text",  placeholder="", 
+        v-model="signInUserName")
+        label Password
+        input.form-styling(type="text", placeholder="",
+        v-model="signInUserPassword")
         input#checkbox(type="checkbox")
         label(for="checkbox")
           span.ui
           | Keep me signed in
-        .btn-animate
+        button.btn-animate
           a.btn-signin Sign in
-      form.form-signup(:class="{'form-signup-left': !signIn}" action="", method="post", name="form")
-        label(for="username") Username
-        input.form-styling(type="text", name="username", placeholder="")
-        label(for="email") Email
-        input.form-styling(type="text", name="email", placeholder="")
-        label(for="password") Password
-        input.form-styling(type="text", name="password", placeholder="")
+      //- SECOND FORM
+      form.form-signup(
+       :class="{'form-signup-left': !signIn}" , name="form"
+       @submit.prevent="submitSignUpForm"
+       )
+        label Username
+        input.form-styling(type="text", 
+        v-model="signUpUserName"
+        placeholder="")
+        label Email
+        input.form-styling(type="text",  placeholder="",
+        v-model="signUpUserEmail")
+        label Password
+        input.form-styling(
+         type="text", 
+         placeholder="",
+         v-model="signUpUserPassword")
         label(for="confirmpassword") Confirm password
         input.form-styling(type="text", name="confirmpassword", placeholder="")
-        a.btn-signup(ng-click="checked = !checked") Sign Up
+        button.btn-signup Sign Up
       .success
         svg#check(
           width="270",
@@ -55,41 +71,55 @@
       .profile-photo
       h1.welcome Welcome, Chris
       a.btn-goback(value="Refresh", onclick="history.go()") Go back
-  a#refresh(value="Refresh", onclick="history.go()")
-    svg#Capa_1.refreshicon(
-      version="1.1",
-      xmlns="http://www.w3.org/2000/svg",
-      xmlns:xlink="http://www.w3.org/1999/xlink",
-      x="0px",
-      y="0px",
-      width="25px",
-      height="25px",
-      viewbox="0 0 322.447 322.447",
-      style="enable-background: new 0 0 322.447 322.447",
-      xml:space="preserve"
-    )
-      path(
-        d="M321.832,230.327c-2.133-6.565-9.184-10.154-15.75-8.025l-16.254,5.281C299.785,206.991,305,184.347,305,161.224\
-              c0-84.089-68.41-152.5-152.5-152.5C68.411,8.724,0,77.135,0,161.224s68.411,152.5,152.5,152.5c6.903,0,12.5-5.597,12.5-12.5\
-              c0-6.902-5.597-12.5-12.5-12.5c-70.304,0-127.5-57.195-127.5-127.5c0-70.304,57.196-127.5,127.5-127.5\
-              c70.305,0,127.5,57.196,127.5,127.5c0,19.372-4.371,38.337-12.723,55.568l-5.553-17.096c-2.133-6.564-9.186-10.156-15.75-8.025\
-              c-6.566,2.134-10.16,9.186-8.027,15.751l14.74,45.368c1.715,5.283,6.615,8.642,11.885,8.642c1.279,0,2.582-0.198,3.865-0.614\
-              l45.369-14.738C320.371,243.946,323.965,236.895,321.832,230.327z"
-      )
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import axios from "axios";
 
 export default defineComponent({
     data(){
       return {
         signIn: true,
+        /* signin  */
+        signInUserName: '',
+        signInUserPassword: '',
+        /* signup */
+        signUpUserName: '',
+        signUpUserPassword: '',
+        signUpUserEmail: '',
       }
     },
     methods: {
-    
-  }
+      submitSignInForm():void{
+        const formData = new FormData();
+        formData.append('username', this.signInUserName);
+        formData.append('password', this.signInUserPassword);
+        // Отправляем AJAX запрос на бэк 
+        axios.post('/ajax/user-sign.php', formData)
+          .then(response => {
+            console.log(response.data);
+            // Обработка ответа от сервера
+          })
+          .catch(error => {
+            console.error(error);
+            // Обработка ошибки
+          });
+      },
+      submitSignUpForm():void{
+        const formData = new FormData();
+        formData.append('username', this.signUpUserName);
+        formData.append('email', this.signUpUserEmail);
+        formData.append('password', this.signUpUserPassword);
+        axios.post('/ajax/user-reg.php', formData)
+          .then(response => {
+            console.log(response.data);
+          })
+          .catch(error => {
+            console.error(error);
+          });
+      }
+   }
 });
 </script>
 
