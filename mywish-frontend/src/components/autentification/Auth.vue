@@ -66,11 +66,6 @@
           p Thanks for signing up! Check your email for confirmation.
     .forgot(:class="{'forgot-left' : !signIn}")
       a(href="#") Forgot your password?
-    div
-      .cover-photo
-      .profile-photo
-      h1.welcome Welcome, Chris
-      a.btn-goback(value="Refresh", onclick="history.go()") Go back
 </template>
 
 <script lang="ts">
