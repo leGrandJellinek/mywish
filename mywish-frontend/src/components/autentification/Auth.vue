@@ -5,7 +5,7 @@
         li.signin-active(:class="{'signin-inactive': !signIn}" @click="signIn = true")
           a.btn Sign in
         li.signup-inactive(:class="{'signup-active' : !signIn}" @click="signIn = false")
-          a.btn Sign up 
+          a.btn Sign up
     div(ng-app="", ng-init="checked = false")
       form.form-signin(:class="{'form-signin-left': !signIn}" action="", method="post", name="form")
         label(for="username") Username
@@ -14,7 +14,7 @@
         input.form-styling(type="text", name="password", placeholder="")
         input#checkbox(type="checkbox")
         label(for="checkbox")
-          span.ui Keep me signed in
+          <span class="ui">Keep me signed in</span>
         .btn-animate
           a.btn-signin Sign in
       form.form-signup(:class="{'form-signup-left ': !signIn}" action="", method="post", name="form")
@@ -61,7 +61,7 @@ export default defineComponent({
       }
     },
     methods: {
-    
+
   }
 });
 </script>

@@ -1,5 +1,5 @@
 <template lang="pug">
-section.reg-log
+section
     Header
     .container
     Footer
