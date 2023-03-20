@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory, RouteRecordRaw, createWebHistory} from 'vue-router'
+import { createRouter, createWebHashHistory, RouteRecordRaw, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 
 const routes: Array<RouteRecordRaw> = [

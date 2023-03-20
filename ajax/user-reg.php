@@ -4,5 +4,5 @@
 
 if(!empty($_POST)){
     include_once "../components/db.php";
-    echo "hello world";
+    echo "<pre>"; print_r($_POST); echo "</pre>";
 }
