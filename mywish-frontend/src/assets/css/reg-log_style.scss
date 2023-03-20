@@ -315,17 +315,17 @@ label {
 }
 
 [type="checkbox"]:not(:checked) + label .ui:before {
-  content: "no";
+  content: "";
   font-size: 16px;
-  left: -5.7em;
+  left: -19.5%;
   top: 0.15em;
   color: rgb(0, 0, 0);
 }
 
 [type="checkbox"]:checked + label .ui:after {
-  left: -20em;
+  left: -66%;
   top: -20%;
-  content: "yes";
+  content: "";
   font-size: 16px;
   color: rgb(255, 255, 255);
 
