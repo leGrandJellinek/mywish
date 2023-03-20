@@ -1,8 +1,8 @@
 <template lang="pug">
-section
-    Header
-    .container
-    Footer
+div
+  Header
+  section
+  Footer
 </template>
 
 <script lang="ts">

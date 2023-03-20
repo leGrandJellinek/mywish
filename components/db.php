@@ -1,5 +1,7 @@
 <? 
 
+
+/* Подключение к бд */
 function pdo() {
     $dbname = 'mywish';
     $user = 'root';
@@ -8,13 +10,16 @@ function pdo() {
     return new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
 }
 
-function userReg($login,$pass,$name,$photo) {
+
+/* Регистрация пользователя */
+function userReg($username, $password, $email) {
     $pdo = pdo();
-    $pass = password_hash($pass, PASSWORD_DEFAULT);
-    $query = "INSERT INTO users (login, pass, name, photo) VALUES (?,?,?,?)";
+    $password = password_hash($password, PASSWORD_DEFAULT);
+    $query = "INSERT INTO users (username, password, email) VALUES (?,?,?)";
     $driver = $pdo->prepare($query);
-    $result = $driver->execute([$login,$pass,$name,$photo]);
-    
+    $result = $driver->execute([$username, $password, $email]);
+
+
     return $result;
 }
 
