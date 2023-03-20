@@ -14,13 +14,6 @@ body {
   background-size: cover;
 }
 
-.container {
-  max-width: 1150px;
-  width: 100%;
-  padding: 0 15px;
-  overflow: hidden;
-  margin: 0 auto;
-}
 
 .frame {
   display: flex;
@@ -70,16 +63,7 @@ body {
           transform: translateY(-100px);
   opacity: 0;
 }
-
-li {
-  padding-left: 10px;
-  font-size: 18px;
-  display: inline;
-  text-align: left;
-  text-transform: uppercase;
-  padding-right: 10px;
-  color: var(--secondary-color);
-}
+ 
 
 .signin-active a {
   padding-bottom: 10px;

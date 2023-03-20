@@ -8,11 +8,33 @@
         width: 40%;
     }
 }
+
+@media screen and (max-width:992px) {
+    .footer {
+        &__center {
+            &-block {
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+                gap: 30px;
+            }
+        }
+    }
+}
+
+
 @media screen and (max-width:768px) {
     .frame{
         width: 70%;
     }
+    .footer {
+        &__center {
+            &-block {
+                grid-template-columns: repeat(3,1fr);
+            }
+        }
+    }
 }
+
 @media screen and (max-width:576px) {
     .frame{
         width: 90%;
@@ -29,5 +51,28 @@
         [type="checkbox"]:checked + label .ui:after{
             font-size: 14px;
             }
+    }
+}
+
+@media screen and (max-width:478px) {
+    .footer {
+        &__top {
+            &-email {
+                font-size: 24px;
+            }
+        }
+        &__center {
+            &-block {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            &-item {
+                align-items: center;
+                &__text {
+                    text-align: center;
+                }
+            }
+        }
     }
 }
