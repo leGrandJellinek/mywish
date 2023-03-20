@@ -3,6 +3,11 @@
         width: 60%;
     }
 }
+@media screen and (max-width:1024px) {
+    .frame{
+        width: 40%;
+    }
+}
 
 @media screen and (max-width:992px) {
     .footer {
