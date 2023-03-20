@@ -1,12 +1,17 @@
 <template lang="pug">
 header.header
-    router-link(to="/auth") auth
+    .container
+        Navbar
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import Navbar from "@/components/Navbar.vue";
 
 export default defineComponent({
+    components: {
+        Navbar
+    }
 })
 </script>
 

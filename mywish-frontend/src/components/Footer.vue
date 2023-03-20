@@ -3,7 +3,7 @@ footer.footer
     .container 
         .footer-block
             .footer__top
-                a.footer__top-email ELARRRI@GMAIL.COM
+                a.footer__top-email(href="mailto:info@mywish.uz") INFO@MYWISH.UZ
             .footer__center
                 .footer__center-block
                     FooterCenterItem(
