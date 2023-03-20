@@ -26,7 +26,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 80%;
+  min-height: 60%;
   width: 30%;
   background:
     -webkit-linear-gradient(
@@ -252,7 +252,6 @@ label {
 [type="checkbox"]:not(:checked) + label,
 [type="checkbox"]:checked + label {
   position: relative;
-  padding-left: 50px;
   // padding-top: 2px;
   cursor: pointer;
   margin-top: 8px;
@@ -293,7 +292,6 @@ label {
 /* on checked */
 [type="checkbox"]:checked + label:before {
   background: var(--primary-color);
-
 }
 
 [type="checkbox"]:checked + label:after {
@@ -306,10 +304,10 @@ label {
 [type="checkbox"]:not(:checked) + label .ui:before,
 [type="checkbox"]:checked + label .ui:after {
   position: relative;
-  left: 5%;
+  left: 28%;
   width: 65px;
   border-radius: 15px;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: bold;
   line-height: 22px;
   -webkit-transition: all .2s ease;
@@ -318,15 +316,16 @@ label {
 
 [type="checkbox"]:not(:checked) + label .ui:before {
   content: "no";
-  left: -4%;
-  top: 1%;
+  left: -4.3em;
+  top: 0;
   color: rgb(0, 0, 0);
 }
 
 [type="checkbox"]:checked + label .ui:after {
-  left: -44%;
+  left: -21em;
   top: -20%;
   content: "yes";
+  font-size: 14px;
   color: rgb(255, 255, 255);
 
 }
@@ -428,7 +427,7 @@ a.btn-signup:hover, a.btn-signin:hover {
   color: var(--secondary-color);
   opacity: 0.3;
   font-weight: 400;
-  font-size: 13px;
+  font-size: 18px;
   text-decoration: none;
 }
 
@@ -597,4 +596,10 @@ a.btn-goback:hover {
   display: flex;
   justify-content: center;
   gap: 50px;
+}
+.ui{
+  width: 100%;
+  position: relative;
+  left: 22%;
+  font-size: 18px;
 }

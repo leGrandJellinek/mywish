@@ -5,7 +5,7 @@
         li.signin-active(:class="{'signin-inactive': !signIn}" @click="signIn = true")
           a.btn Sign in
         li.signup-inactive(:class="{'signup-active' : !signIn}" @click="signIn = false")
-          a.btn Sign up 
+          a.btn Sign up
     div(ng-app="", ng-init="checked = false")
       form.form-signin(:class="{'form-signin-left': !signIn}", @submit.prevent="submitSignInForm")
         label Username
@@ -73,7 +73,7 @@ export default defineComponent({
     const formData = new FormData();
     formData.append('username', this.signInUserName);
     formData.append('password', this.signInUserPassword);
-    // Отправляем AJAX запрос на бэк 
+    // Отправляем AJAX запрос на бэк
     axios.post('/ajax/user-sign.php', formData)
       .then(response => {
         console.log(response.data);
