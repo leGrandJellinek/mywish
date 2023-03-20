@@ -329,13 +329,15 @@ label {
 }
 
 .btn-signup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   float: left;
   font-weight: 700;
   text-transform: uppercase;
   font-size: 13px;
   text-align: center;
   color: #ffffff;
-  padding-top: 8px;
   width: 100%;
   height: 35px;
 	border: none;
