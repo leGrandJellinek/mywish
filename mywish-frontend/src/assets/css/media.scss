@@ -1,5 +1,7 @@
 @media screen and (max-width:1440px) {
-    
+    .frame{
+        width: 60%;
+    }
 }
 
 @media screen and (max-width:992px) {
@@ -13,7 +15,12 @@
         }
     }
 }
+
+
 @media screen and (max-width:768px) {
+    .frame{
+        width: 70%;
+    }
     .footer {
         &__center {
             &-block {
@@ -22,6 +29,26 @@
         }
     }
 }
+
+@media screen and (max-width:576px) {
+    .frame{
+        width: 90%;
+    }
+    .ui{
+        font-size: 14px;
+    }
+    .form-signin{
+        & label{
+            padding-left: 30px;
+        }
+        [type="checkbox"]:checked + label .ui,
+        [type="checkbox"]:not(:checked) + label .ui:before,
+        [type="checkbox"]:checked + label .ui:after{
+            font-size: 14px;
+            }
+    }
+}
+
 @media screen and (max-width:478px) {
     .footer {
         &__top {
