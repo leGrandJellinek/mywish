@@ -1,8 +1,6 @@
 <template lang="pug">
 section.reg-log
-    .reg-log__form
-        Auth
-    .decor-img
+    Auth
 </template>
 
 <script lang="ts">

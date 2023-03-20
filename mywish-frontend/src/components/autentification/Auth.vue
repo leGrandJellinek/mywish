@@ -1,51 +1,33 @@
 <template lang="pug">
-.container
-  .frame(:class="{'frame-long' : !signIn}")
+.frame(:class="{'frame-long' : !signIn}")
     .nav
-      ul
+      ul.sign-btns
         li.signin-active(:class="{'signin-inactive': !signIn}" @click="signIn = true")
           a.btn Sign in
         li.signup-inactive(:class="{'signup-active' : !signIn}" @click="signIn = false")
           a.btn Sign up 
     div(ng-app="", ng-init="checked = false")
-      //- FIRST FORM
-      form.form-signin(
-        :class="{'form-signin-left': !signIn}", 
-        name="form",
-        @submit.prevent="submitSignInForm")
-        label Username
-        input.form-styling(type="text",  placeholder="", 
-        v-model="signInUserName")
-        label Password
-        input.form-styling(type="text", placeholder="",
-        v-model="signInUserPassword")
+      form.form-signin(:class="{'form-signin-left': !signIn}" action="", method="post", name="form")
+        label(for="username") Username
+        input.form-styling(type="text", name="username", placeholder="")
+        label(for="password") Password
+        input.form-styling(type="text", name="password", placeholder="")
         input#checkbox(type="checkbox")
         label(for="checkbox")
-          span.ui
-          | Keep me signed in
-        button.btn-animate
+          span.ui Keep me signed in
+        .btn-animate
           a.btn-signin Sign in
-      //- SECOND FORM
-      form.form-signup(
-       :class="{'form-signup-left': !signIn}" , name="form"
-       @submit.prevent="submitSignUpForm"
-       )
-        label Username
-        input.form-styling(type="text", 
-        v-model="signUpUserName"
-        placeholder="")
-        label Email
-        input.form-styling(type="text",  placeholder="",
-        v-model="signUpUserEmail")
-        label Password
-        input.form-styling(
-         type="text", 
-         placeholder="",
-         v-model="signUpUserPassword")
+      form.form-signup(:class="{'form-signup-left ': !signIn}" action="", method="post", name="form")
+        label(for="username") Username
+        input.form-styling(type="text", name="username", placeholder="")
+        label(for="email") Email
+        input.form-styling(type="text", name="email", placeholder="")
+        label(for="password") Password
+        input.form-styling(type="text", name="password", placeholder="")
         label(for="confirmpassword") Confirm password
         input.form-styling(type="text", name="confirmpassword", placeholder="")
-        button.btn-signup Sign Up
-      .success
+        a.btn-signup(ng-click="checked = !checked") Sign Up
+      //- .success
         svg#check(
           width="270",
           height="270",
@@ -66,55 +48,21 @@
           p Thanks for signing up! Check your email for confirmation.
     .forgot(:class="{'forgot-left' : !signIn}")
       a(href="#") Forgot your password?
+    div
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import axios from "axios";
 
 export default defineComponent({
     data(){
       return {
         signIn: true,
-        /* signin  */
-        signInUserName: '',
-        signInUserPassword: '',
-        /* signup */
-        signUpUserName: '',
-        signUpUserPassword: '',
-        signUpUserEmail: '',
       }
     },
     methods: {
-      submitSignInForm():void{
-        const formData = new FormData();
-        formData.append('username', this.signInUserName);
-        formData.append('password', this.signInUserPassword);
-        // Отправляем AJAX запрос на бэк 
-        axios.post('/ajax/user-sign.php', formData)
-          .then(response => {
-            console.log(response.data);
-            // Обработка ответа от сервера
-          })
-          .catch(error => {
-            console.error(error);
-            // Обработка ошибки
-          });
-      },
-      submitSignUpForm():void{
-        const formData = new FormData();
-        formData.append('username', this.signUpUserName);
-        formData.append('email', this.signUpUserEmail);
-        formData.append('password', this.signUpUserPassword);
-        axios.post('/ajax/user-reg.php', formData)
-          .then(response => {
-            console.log(response.data);
-          })
-          .catch(error => {
-            console.error(error);
-          });
-      }
-   }
+    
+  }
 });
 </script>
 
