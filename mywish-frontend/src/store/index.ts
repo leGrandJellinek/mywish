@@ -50,6 +50,7 @@ export default createStore({
       {
         id: 1,
         name: "77-2, улица Абдулла Кадыри Ташкент, Узбекистан",
+        link: "https://goo.gl/maps/dCC12x9mWWMz9wHK8",
       }
     ],
     companyPhones:[

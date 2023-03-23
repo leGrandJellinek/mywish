@@ -6,7 +6,7 @@
             v-for="station in item.items"
             :key="station.id")
             a.footer__center-item__link(v-if="station.link" :href="station.link") {{station.name}}
-            a.footer__center-item__text(v-else href="https://goo.gl/maps/dCC12x9mWWMz9wHK8" target="_blank") {{station.name}}
+            p.footer__center-item__text(v-else target="_blank") {{station.name}}
 </template>
 
 <script lang="ts">
