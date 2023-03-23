@@ -22,34 +22,34 @@ export default createStore({
     companyMenuPage: [
       {
         id: 1,
-        name: 'Services',
+        name: 'Сервисы',
         link: '#',
       },
       {
         id: 2,
-        name: 'Projects',
+        name: 'Прaвила',
         link: '#',
       },
       {
         id: 3,
-        name: 'Contacts',
+        name: 'Контакты',
         link: '#',
       },
       {
         id: 4,
-        name: 'Partners',
+        name: 'Партнеры',
         link: '#',
       },
       {
         id: 5,
-        name: 'About',
+        name: 'О нас',
         link: '#',
       },
     ],
     companyMenuAdress: [
       {
         id: 1,
-        name: "88-42, Osiye street Tashkent, Uzbekistan",
+        name: "77-2, улица Абдулла Кадыри Ташкент, Узбекистан",
       }
     ],
     companyPhones:[

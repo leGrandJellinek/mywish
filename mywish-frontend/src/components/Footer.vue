@@ -1,6 +1,6 @@
 <template lang="pug">
 footer.footer
-    .container 
+    .container
         .footer-block
             .footer__top
                 a.footer__top-email(href="mailto:info@mywish.uz") INFO@MYWISH.UZ
@@ -12,7 +12,7 @@ footer.footer
                         :item="item"
                     )
             .footer__bottom
-                p.footer__bottom-compname Name of the company © 2021
+                p.footer__bottom-compname Mywish © 2023
 
 </template>
 

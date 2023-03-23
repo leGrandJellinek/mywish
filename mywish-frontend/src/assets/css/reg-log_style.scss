@@ -63,7 +63,7 @@ body {
           transform: translateY(-100px);
   opacity: 0;
 }
- 
+
 
 .signin-active a {
   padding-bottom: 10px;
@@ -381,7 +381,7 @@ label {
 
 a.btn-signup:hover, a.btn-signin:hover {
     cursor: pointer;
-    background-color: var(--active-color);
+    background-color: var(--active-color);  
     -webkit-transition: background-color .5s;
     transition: background-color .5s;
 }
@@ -593,6 +593,7 @@ a.btn-goback:hover {
   transition: all 300ms ease-in-out;
   &:hover{
     background-color: var(--active-color);
+
   }
 
 }

@@ -7,28 +7,26 @@ $gutters: 30px
 $gutters-side: calc($gutters / 2)
 
 @mixin media($size: 1399px)
-    @media (max-width: $size) 
+    @media (max-width: $size)
         @content
-    
 
-
-@mixin container($padding: $gutters-side) 
+@mixin container($padding: $gutters-side)
     max-width: $xxl
     width: 100%
     margin: 0 auto
     padding: 0 $padding
-    
-    @include media(1399px) 
+
+    @include media(1399px)
         max-width: $xl
-    
-    @include media(1199px) 
+
+    @include media(1199px)
         max-width: $lg
-    
-    @include media(991px) 
+
+    @include media(991px)
         max-width: $md
-    
-    @include media(767px) 
+
+    @include media(767px)
         max-width: $sm
-    
-    @include media(576px) 
-        max-width: 100%   
+
+    @include media(576px)
+        max-width: 100%

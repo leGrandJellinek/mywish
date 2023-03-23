@@ -1,9 +1,9 @@
 .footer
-    background-color: #856d47
+    background-color: var(--primary-color)
     padding-top: 75px
-    &__top 
+    &__top
         display: flex
-        justify-content: center 
+        justify-content: center
         align-items: center
         padding-bottom: 61px
         position: relative
@@ -14,8 +14,8 @@
             height: 1px
             position: absolute
             bottom: 0
-        &-email 
-            color: #f6f5e8
+        &-email
+            color: var(--bgOrTxt-color)
             font-size: 40px
             font-family: 'Arial',Arial,sans-serif
             line-height: 1.1
@@ -23,17 +23,17 @@
             background-position: center center
             border-color: transparent
             border-style: solid
-    &__center 
+    &__center
         padding: 60px 0
-        &-block 
+        &-block
             display: flex
             justify-content: space-between
-        &-item 
+        &-item
             display: flex
             flex-direction: column
             gap: 20px
-            &__title 
-                color: #f6f5e8
+            &__title
+                color: var(--bgOrTxt-color)
                 font-size: 16px
                 font-family: 'Arial',Arial,sans-serif
                 line-height: 1.55
@@ -45,9 +45,10 @@
                 display: flex
                 flex-direction: column
                 gap: 7px
-            &__link 
+            &__link
                 max-width: 310px
-                color: #f6f5e8
+                width: 100%
+                color: var(--bgOrTxt-color)
                 font-size: 24px
                 font-family: 'Arial',Arial,sans-serif
                 line-height: 2
@@ -56,8 +57,10 @@
                 border-color: transparent
                 border-style: solid
             &__text
-                max-width: 310px 
-                color: #f6f5e8
+                max-width: 330px
+                width: 100%
+                display: block
+                color: var(--bgOrTxt-color)
                 font-size: 24px
                 font-family: 'Arial',Arial,sans-serif
                 line-height: 2
@@ -65,11 +68,11 @@
                 background-position: center center
                 border-color: transparent
                 border-style: solid
-    &__bottom 
+    &__bottom
         position: relative
         padding: 47px 0
-        &-compname 
-            color: #f6f5e8
+        &-compname
+            color: var(--bgOrTxt-color)
             font-size: 16px
             font-family: 'Raleway',Arial,sans-serif
             line-height: 1.55
@@ -81,6 +84,6 @@
            content: ''
            width: 100%
            height: 1px
-           background: white 
+           background: white
            position: absolute
-           top: 0 
+           top: 0
