@@ -14,6 +14,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/auth",
     name: "Auth",
     component: () => import("@/views/RegLog.vue")
+  },
+  {
+    path: "/search",
+    name:"Search",
+    component:() => import("@/views/FinderView.vue")
   }
 ]
 

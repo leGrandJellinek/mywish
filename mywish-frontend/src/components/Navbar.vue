@@ -5,7 +5,7 @@ nav.header__navbar
         li.header__navbar-link(
                 v-for="item in navMenu"
                 :key="item.id")
-            a(:href="item.link" class="btn-link") {{item.name}}
+            router-link(:to="item.link" class="btn-link") {{item.name}}
     .header__navbar-btns
         router-link.btn_primary.header__navbar-login(to="/auth") Log in
 
@@ -37,6 +37,11 @@ export default defineComponent({
           id: 4,
           name: "Профиль",
           link: "#",
+        },
+        {
+          id: 5,
+          name: "Поиск тест",
+          link: "/search",
         },
         // {
         //     id:5,

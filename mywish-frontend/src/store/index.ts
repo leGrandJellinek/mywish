@@ -1,5 +1,7 @@
 import { createStore } from 'vuex'
 
+import axios from "axios";
+
 export default createStore({
   state: {
     companySocialNetworks: [
@@ -86,6 +88,21 @@ export default createStore({
   mutations: {
   },
   actions: {
+    async parseFromSite({commit}, url:string):Promise<void>{
+      try {
+        console.log(url);
+
+        const response = await fetch(url);
+        const html = await response.text();
+        console.log(response);
+
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+        console.log(doc);
+      } catch (error) {
+        console.error(error);
+      }
+    }
   },
   modules: {
   }

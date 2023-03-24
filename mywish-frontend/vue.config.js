@@ -13,5 +13,5 @@ module.exports = defineConfig({
   ? '/dist/'
   : '/',
   outputDir: "../dist",
-  filenameHashing: false
+  filenameHashing: false,
 })
