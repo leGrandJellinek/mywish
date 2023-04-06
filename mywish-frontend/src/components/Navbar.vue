@@ -7,13 +7,14 @@ nav.header__navbar
                 :key="item.id")
             router-link(:to="item.link" class="btn-link") {{item.name}}
     .header__navbar-btns
-        router-link.btn_primary.header__navbar-login(to="/auth") Log in
+        router-link.btn_primary.header__navbar-login(to="/auth" v-if="!getAuth") Log in
+        router-link.btn_primary.header__navbar-login(to="/profile" v-if="getAuth") Профиль
 
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-
+import { mapGetters } from "vuex";
 export default defineComponent({
   data() {
     return {
@@ -33,6 +34,8 @@ export default defineComponent({
           name: "Идеи подарков",
           link: "#",
         },
+<<<<<<< HEAD
+=======
         {
           id: 4,
           name: "Профиль",
@@ -43,6 +46,7 @@ export default defineComponent({
           name: "Поиск тест",
           link: "/search",
         },
+>>>>>>> 8ce8864307a5b3a15c00cae5b2fabf70138c2685
         // {
         //     id:5,
         //     name: "",
@@ -51,7 +55,8 @@ export default defineComponent({
       ],
     };
   },
+  computed:{
+    ...mapGetters(['getAuth'])
+  },
 });
 </script>
-
-<style lang="sass" scoped></style>

@@ -61,7 +61,8 @@ export default createStore({
         name: "+998 90 932 10 50",
         link: "tel:998909321050"
       }
-    ]
+    ],
+    logined: true
   },
   getters: {
     getFooterList(state):{title:string, items: any}[]{
@@ -83,6 +84,9 @@ export default createStore({
           items: state.companyPhones
         },
       ]
+    },
+    getAuth(state){
+      return state.logined
     }
   },
   mutations: {

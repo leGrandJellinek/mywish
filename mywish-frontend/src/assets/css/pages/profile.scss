@@ -1,0 +1,122 @@
+.profile{
+    &-resset{
+        display: flex;
+        gap: 30px;
+        & a{
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+    }
+    &-vis{
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        font-weight: 300;
+        color: var(--secondary-color);
+    }
+    &-text-inputs{
+        position: relative;
+        width: 100%;
+        display: flex;
+        gap: 30px;
+    }
+    &-input{
+        border: 1px solid var(--secondary-color);
+        padding: 15px 20px;
+        border-radius: 15px;
+        width: 100%;
+        &-label{
+            width: 50%;
+            position: relative;
+        }
+
+        &-mail{
+            position: relative;
+            width: 100%;
+            & > input{
+                width: 100%;
+            }
+        }
+        &-date{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            gap: 30px;
+         & .profile-label{
+            top: -40%;
+         }
+        }
+    }
+    &-label{
+        position: absolute;
+        top: -40%;
+    }
+    &-img{
+        &-text{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            max-width: 450px;
+            line-height: 22px;
+        }
+        &-title{
+            font-weight: 700;
+        }
+        &-input{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &-prev{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background: var(--secondary-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            & i{
+                font-size: 48px;
+            }
+        }
+    }
+}
+.user{
+    &-date{
+        width: 80%;
+        border-radius: 15px;
+        padding: 15px 20px;
+        appearance: none;
+        border: 1px solid var(--secondary-color);
+        color: var(--secondary-color);
+        &__year{
+            color: black;
+        }
+    }
+    &-info{
+        &-top{
+            display: flex;
+            align-items: center;
+        }
+
+    }
+    &-info{
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        align-items: center;
+        &-top{
+            display: flex;
+            gap: 30px;
+        }
+        &-bottom{
+            display: flex;
+            width: 45%;
+            gap: 30px;
+            flex-direction: column;
+            margin-bottom: 30px;
+        }
+    }
+}

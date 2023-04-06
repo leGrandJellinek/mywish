@@ -16,10 +16,17 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import("@/views/RegLog.vue")
   },
   {
+<<<<<<< HEAD
+    path: "/profile",
+    name: "profile",
+    component: () => import("@/views/UserProfile.vue")
+  },
+=======
     path: "/search",
     name:"Search",
     component:() => import("@/views/FinderView.vue")
   }
+>>>>>>> 8ce8864307a5b3a15c00cae5b2fabf70138c2685
 ]
 
 const router = createRouter({
