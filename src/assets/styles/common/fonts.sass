@@ -1,0 +1,7 @@
+$Jost: ('ExtraBold',800),('Bold', 700),('Medium',500),('Regular',400),
+
+@each $name , $weight in $Jost 
+    @font-face 
+        font-family: 'Jost'
+        src: url("../../fonts/Jost/Jost-#{$name}.ttf")
+        font-weight: $weight

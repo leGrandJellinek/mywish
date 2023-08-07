@@ -1,0 +1,220 @@
+.list-component__wrapper 
+    display: flex
+    gap: 30px
+    margin-bottom: 75px
+
+.list
+    padding: 60px 19px
+    border-radius: 10px
+    background: rgba(255, 255, 255, 0.90)
+    &-header 
+        display: flex
+        flex-direction: column
+        align-items: center
+        &__profile 
+            display: flex
+            gap: 19px
+            margin-bottom: 45px
+            &-content 
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: flex-start
+                gap: 5px
+            &-icon 
+                display: flex
+                align-items: center
+                justify-content: center
+                padding: 25px 26.5px
+                border-radius: 50%
+                background: rgba(250, 255, 28, 0.90)
+            &-listname 
+                color: #282828
+                text-align: center
+                font-family: Jost
+                font-size: 28px
+                font-style: normal
+                font-weight: 500
+                line-height: 24px
+            &-listdescr
+                color: #282828
+                text-align: center
+                font-family: Jost
+                font-size: 20px
+                font-style: normal
+                font-weight: 300
+                line-height: 24px
+    &-content 
+        &__header 
+            display: flex
+            flex-direction: column
+            gap: 15px
+            margin-bottom: 33px
+        &__title 
+            color: #282828
+            text-align: center
+            font-family: Jost
+            font-size: 24px
+            font-style: normal
+            font-weight: 600
+            line-height: 24px
+        &__descr 
+            color: #282828
+            text-align: center
+            font-family: Jost
+            font-size: 24px
+            font-style: normal
+            font-weight: 300
+            line-height: 24px
+        &__search 
+            &-wrapper 
+                display: flex
+                justify-content: flex-end
+            &-block 
+                position: relative
+            &-input 
+                border-radius: 10px
+                border: 1px solid #282828
+                padding: 7px 30px
+                color: #282828
+                font-family: Jost
+                font-size: 20px
+                font-style: normal
+                font-weight: 400
+                line-height: 24px
+            &-icon 
+                position: absolute
+                display: flex
+                top: 9px
+                right: 30px
+    &-block 
+        display: grid
+        grid-template-columns: repeat(4,1fr)
+        column-gap: 15px
+        row-gap: 30px
+
+.user-lists
+    max-width: 270px
+    width: 100%
+    padding: 40px 5px
+    border-radius: 15px
+    background: rgba(255, 255, 255, 0.90)
+    &__header
+        margin-bottom: 28px
+        &-content 
+            display: flex
+            gap: 15px
+            justify-content: center
+            align-items: center
+            margin-bottom: 34px
+        &-icon 
+            display: flex
+        &-title 
+            color: #282828
+            text-align: center
+            font-family: Jost
+            font-size: 24px
+            font-style: normal
+            font-weight: 700
+            line-height: 24px
+        &-btn 
+            display: flex 
+            gap: 4px
+            width: 100%
+            padding: 5px 9px
+            align-items: center
+            border-radius: 10px
+            background: #D9D9D9
+            cursor: pointer
+            &__text 
+                color: #282828
+                text-align: center
+                font-family: Jost
+                font-size: 24px
+                font-style: normal
+                font-weight: 500
+                line-height: 24px
+    &__block
+        display: grid
+        grid-template-columns: repeat(1,1fr)
+        row-gap: 12px
+        &-item 
+            cursor: pointer
+            &.active
+                background: #FBFF3C
+
+.lists-item
+    &__inner
+        padding: 4px 5px
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &__icon 
+        display: flex
+    &__title 
+        color: #282828
+        text-align: center
+        font-family: Jost
+        font-size: 16px
+        font-style: normal
+        font-weight: 400
+        line-height: 24px
+    &__type 
+        color: #282828
+        text-align: center
+        font-family: Jost
+        font-size: 12px
+        font-style: normal
+        font-weight: 300
+        line-height: 24px
+    &__options 
+        display: flex
+    &__settings, &__delete 
+        display: flex
+        cursor: pointer
+
+
+.present
+    &__img 
+        &-wrapper 
+            padding: 45px
+            display: flex
+            align-items: center
+            justify-content: center
+            border-radius: 10px
+            border: 1px solid #282828
+            background: rgba(117, 117, 117, 0.26)
+            margin-bottom: 10px
+ 
+    &__content 
+        display: flex
+        flex-direction: column
+        align-items: center
+        gap: 10px
+    &__name 
+        color: #282828
+        text-align: center
+        font-family: Jost
+        font-size: 17px
+        font-style: normal
+        font-weight: 500
+        line-height: 24px
+    &__descr 
+        color: #282828
+        text-align: center
+        font-family: Jost
+        font-size: 13px
+        font-style: normal
+        font-weight: 400
+        line-height: 15px
+    &__button 
+        padding: 6px 46px
+        color: #282828
+        text-align: center
+        font-family: Jost
+        font-size: 18px
+        font-style: normal
+        font-weight: 400
+        line-height: 24px
+        border-radius: 5px
+        border: 1px solid #282828

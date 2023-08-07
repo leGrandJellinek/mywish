@@ -1,0 +1,38 @@
+.instruction 
+    margin-bottom: 30px
+    &-title 
+        color: #FFF
+        font-size: 36px
+        font-weight: 700
+        line-height: 35px
+        margin-bottom: 35px
+    &-block 
+        columns: 2
+        column-gap: 175px
+        position: relative
+        &::before
+            content: ""
+            width: 2px
+            background: #FFF
+            height: calc( 100% - 67px )
+            position: absolute
+            left: 50%
+            top: 0
+    &-item 
+        display: inline-flex
+        flex-direction: column
+        align-items: flex-start
+        margin-bottom: 67px
+        &__title
+            color: #FFF
+            font-size: 20px
+            font-weight: 700
+            line-height: 35px
+        &__descr
+            text-align: left
+            color: #FFF
+            font-size: 20px 
+            font-style: normal
+            font-weight: 500
+            line-height: 35px
+            opacity: 0.65

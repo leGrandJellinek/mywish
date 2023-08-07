@@ -1,0 +1,61 @@
+.footer 
+    padding: 30px 0 0 0
+    position: relative
+    &-up 
+        margin-bottom: 24px
+        &__block 
+            display: flex
+            justify-content: space-between
+            &.isMobile 
+                display: none
+        &__right 
+            display: flex
+    &-menu 
+        display: flex
+        flex-direction: column
+        gap: 10px
+        align-items: flex-start
+        &__wrapper 
+            display: flex
+            flex-direction: column
+            gap: 20px
+            &:nth-of-type(1)
+                margin-right: 140px
+            &:nth-of-type(2)
+                margin-right: 80px
+        &__title 
+            color: #FFF
+            font-size: 28px
+            text-align: left
+            font-weight: 700
+        &__link 
+            color: rgba(255, 255, 255, 0.70)
+            font-size: 20px
+            transition: color 500ms ease
+            &:hover 
+                color: #FFF
+    &-bottom
+        background: rgba(45, 2, 56, 0.60)
+        &__block 
+            display: flex
+            padding: 14px 0
+        &__item 
+            width: 48%
+            display: flex
+            gap: 79px
+            margin-right: 5px
+        &__text 
+            color: rgba(255, 255, 255, 0.70)
+            font-size: 16px
+            font-weight: 500
+    &-bg 
+        height: 100%
+        width: 100%
+        position: absolute
+        top: 0
+        left: 0
+        background: rgba(40, 40, 40, 0.70)
+        z-index: -1
+        opacity: 0.5
+
+

@@ -1,0 +1,58 @@
+.header 
+    margin-bottom: 55px
+.navbar 
+    padding: 33px 0
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &-menu 
+        display: flex
+        gap: 30px
+        &__wrapper
+            display: flex
+            gap: 46px
+            align-items: center
+        &__link 
+            font-family: 'Jost'
+            font-style: normal
+            font-weight: 700
+            font-size: 24px
+            line-height: 24px
+            text-align: center
+            color: rgba(255, 255, 255, 0.7)
+            transition: all 500ms ease 
+            border: 0px
+            position: relative
+            &:hover 
+                color: #FBFF3C
+                &::before
+                    width: 100%
+            &::before
+                content: ""
+                position: absolute
+                bottom: 0
+                width: 0px
+                height: 1px
+                background: #FBFF3C
+                transition: width 500ms ease 
+
+.main 
+    display: flex
+    flex-direction: column
+    gap: 90px
+
+.burger-btn 
+    width: 25px
+    height: 25px
+    display: none
+
+.my-profile 
+    &__wrapper 
+        margin-bottom: 7px
+    &__link
+        padding: 17.5px
+        display: flex
+        align-items: center 
+        justify-content: center 
+        border-radius: 50%
+        background: rgba(250, 255, 28, 0.90)
