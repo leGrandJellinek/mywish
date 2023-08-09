@@ -1,11 +1,9 @@
-<template>
-  <div class="wrapper">
-
-  </div>
+<template lang="pug">
+.wrapper
+  router-view
 </template>
 
 <script>
 export default {
-
 }
 </script>
