@@ -2,39 +2,37 @@
     margin: 0
     padding: 0
     box-sizing: border-box !important
+    user-select: none
 
-body 
+body
     font-family: Jost
     background: linear-gradient(to right, #509EEB 0%, #D77D98 50%, #D9ACA3 100%)
     background-size: 600% 600%
     animation: bgAnimateLinear 5s infinite linear
 
-a 
+a
     text-decoration: none
 
-ul 
+ul
     list-style: none
-
 
 textarea
     resize: none
     outline: none
     border: none
-    background: none  
+    background: none
 
-input 
+input
     outline: none
     border: none
     background: none
 
-
-button 
+button
     background: none
     outline: none
     border: none
 
-
-.container 
+.container
     @include container()
 
 @keyframes bgAnimateLinear
@@ -44,4 +42,3 @@ button
         background-position: 100% 20%
     100%
         background-position: 0 85%
-        

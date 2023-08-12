@@ -1,14 +1,14 @@
 <template lang="pug">
-.header 
-    .container 
-        nav.navbar 
-            .navbar-logo 
+.header
+    .container
+        nav.navbar
+            .navbar-logo
                 a(href="")
                     img(src="@/assets/images/logo.png")
-            ul.navbar-menu 
+            ul.navbar-menu
                 li(v-for="link in menu" :key="link.id")
                     router-link.navbar-menu__link(:to="link.link") {{link.name}}
-            button.burger-btn 
+            button.burger-btn
                 img(src="@/assets/svg/bars.svg")
 </template>
 
@@ -19,22 +19,22 @@ export default {
             menu: [
                 {
                     id: 1,
-                    name: "Войти",
+                    name: "Главная",
                     link: '/'
                 },
                 {
                     id: 2,
-                    name: "Желания",
+                    name: "Список желаний",
                     link: '/list'
                 },
                 {
                     id: 3,
-                    name: "Подарки",
+                    name: "Список подарков",
                     link: '/list'
                 },
                 {
                     id: 4,
-                    name: "Главная",
+                    name: "Войти/Регистрация",
                     link: '/'
                 },
             ]
