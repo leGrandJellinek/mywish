@@ -15,23 +15,24 @@ footer.footer
                             ul.footer-menu
                                 li.footer-menu__li(v-for="secondLevel in menu.secondLevel" :key="secondLevel.id")
                                     a(:href="secondLevel.link" v-if="secondLevel.title") {{secondLevel.title}}
-                                    i(v-if="secondLevel.icon" :class="secondLevel.icon")
+                                    a(:href="secondLevel.link")
+                                        i(v-if="secondLevel.icon" :class="secondLevel.icon")
                 .footer-up__block.isMobile
                     .footer-logo__wrapper
                         .footer-logo
-                            a(href="")
+                            a(href="/")
                                 img.logo(src="@/assets/images/logo.png")
                     .footer-menu__wrapper(v-for="menu in footerMenu" :key="menu.id")
                         h2.footer-menu__title {{menu.name}}
                         ul.footer-menu
                             li(v-for="secondLevel in menu.secondLevel" :key="secondLevel.id")
-                                a(v-if="secondLevel.title" :href="secondLevel.link") {{secondLevel.title}}
+                                a(v-if="secondLevel.title") {{secondLevel.title}}
                                 i(v-if="secondLevel.icon" :class="secondLevel.icon")
         .footer-bottom
             .container
                 .footer-bottom__block
                     .footer-bottom__item
-                        .footer-bottom__text  2023 Mywish All Rights Reserved.
+                        .footer-bottom__text  {{  new Date().getFullYear() }} Mywish All Rights Reserved.
                     .footer-bottom__item
                         p.footer-bottom__text  Политика конфиденциальности
                         p.footer-bottom__text  Условия эксплуатации
@@ -64,9 +65,9 @@ export default {
         {
           name: 'Мы тут',
           secondLevel: [
-            { id: 1, icon: '' },
-            { id: 2, icon: '' },
-            { id: 3, icon: '' },
+            { id: 1, icon: 'fa-brands fa-instagram fa-shake', link:'/' },
+            { id: 2, icon: 'fa-brands fa-telegram fa-shake', link:'/' },
+            { id: 3, icon: 'fa-solid fa-envelope fa-shake', link:'/' },
           ],
         },
       ],
@@ -74,9 +75,9 @@ export default {
         {
           name: 'Мы тут',
           secondLevel: [
-            { id: 1, icon: '' },
-            { id: 2, icon: '' },
-            { id: 3, icon: '' },
+            { id: 1, icon: 'fa-brands fa-instagram fa-shake', link:'/' },
+            { id: 2, icon: 'fa-brands fa-telegram fa-shake', link:'/' },
+            { id: 3, icon: 'fa-solid fa-envelope fa-shake', link:'/' },
           ],
         },
         {

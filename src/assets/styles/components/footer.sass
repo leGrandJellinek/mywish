@@ -1,21 +1,24 @@
-.footer 
+.footer
     padding: 30px 0 0 0
     position: relative
-    &-up 
+    &-up
         margin-bottom: 24px
-        &__block 
+        &__block
             display: flex
             justify-content: space-between
-            &.isMobile 
+            &.isMobile
                 display: none
-        &__right 
+        &__right
             display: flex
-    &-menu 
+    &-menu
         display: flex
         flex-direction: column
         gap: 10px
         align-items: flex-start
-        &__wrapper 
+        a
+            color: var(--white)
+            font-weight: 500
+        &__wrapper
             display: flex
             flex-direction: column
             gap: 20px
@@ -23,32 +26,39 @@
                 margin-right: 140px
             &:nth-of-type(2)
                 margin-right: 80px
-        &__title 
+            &:last-child
+                .footer-menu
+                    flex-direction: row
+                    justify-content: center
+                    gap: 15px
+                    & i
+                        font-size: 25px
+        &__title
             color: #FFF
             font-size: 28px
             text-align: left
             font-weight: 700
-        &__link 
+        &__link
             color: rgba(255, 255, 255, 0.70)
             font-size: 20px
             transition: color 500ms ease
-            &:hover 
+            &:hover
                 color: #FFF
     &-bottom
         background: rgba(45, 2, 56, 0.60)
-        &__block 
+        &__block
             display: flex
             padding: 14px 0
-        &__item 
+        &__item
             width: 48%
             display: flex
             gap: 79px
             margin-right: 5px
-        &__text 
+        &__text
             color: rgba(255, 255, 255, 0.70)
             font-size: 16px
             font-weight: 500
-    &-bg 
+    &-bg
         height: 100%
         width: 100%
         position: absolute
@@ -57,5 +67,3 @@
         background: rgba(40, 40, 40, 0.70)
         z-index: -1
         opacity: 0.5
-
-
