@@ -1,18 +1,18 @@
 <template lang="pug">
-header.header 
+header.header
     .container
         nav.navbar
-            .navbar-logo 
+            .navbar-logo
                 router-link(to="/")
-                    img(src="@/assets/images/logo.png")
+                    img(src="@/assets/images/Mywish_logo.svg")
             .navbar-menu__wrapper
-                ul.navbar-menu 
+                ul.navbar-menu
                     li(v-for="link in menu" :key="link.id")
                         a.navbar-menu__link(:href="link.link") {{link.name}}
                 .my-profile__wrapper
                     a.my-profile__link(href="")
                         img(src="@/assets/svg/iconoir_user-love.svg")
-            button.burger-btn 
+            button.burger-btn
                 img(src="@/assets/svg/bars.svg")
 
 </template>

@@ -3,7 +3,7 @@
     padding: 0
     box-sizing: border-box !important
     user-select: none
-
+    color: var(--white)
 body
     font-family: Jost
     background: linear-gradient(to right, #509EEB 0%, #D77D98 50%, #D9ACA3 100%)
@@ -34,6 +34,14 @@ button
 
 .container
     @include container()
+.wrapper
+    min-height: 52.4vh
+    display: flex
+    flex-direction: column
+    justify-content: center
+.center
+    text-align: center
+    
 
 @keyframes bgAnimateLinear
     0%

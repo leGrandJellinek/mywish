@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
-import ListView from '@/views/ListView.vue'
+import InDevelope from "@/views/InDevelope";
 
 const routes = [
   {
@@ -10,10 +10,10 @@ const routes = [
     meta:{title: "Главная"}
   },
   {
-    path: '/list',
-    name: 'list',
-    component: ListView,
-    meta:{title: "Список Подарков"}
+    path: '/indevelope',
+    name: 'indevelope',
+    component: InDevelope,
+    meta:{title: "В разработке"}
   },
 ]
 

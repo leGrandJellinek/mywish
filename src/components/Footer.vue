@@ -8,7 +8,7 @@ footer.footer
                         .footer-logo__wrapper
                             .footer-logo
                                 a(href="")
-                                    img(src="@/assets/images/logo.png", alt="alt")
+                                    img(src="@/assets/images/mywish_logo.svg", alt="alt")
                     .footer-up__right
                         .footer-menu__wrapper(v-for="menu in footerMenu" :key="menu.id")
                             h2.footer-menu__title {{menu.name}}
@@ -21,7 +21,7 @@ footer.footer
                     .footer-logo__wrapper
                         .footer-logo
                             a(href="/")
-                                img.logo(src="@/assets/images/logo.png")
+                                img.logo(src="@/assets/images/mywish_logo.svg")
                     .footer-menu__wrapper(v-for="menu in footerMenu" :key="menu.id")
                         h2.footer-menu__title {{menu.name}}
                         ul.footer-menu
