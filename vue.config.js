@@ -9,4 +9,7 @@ module.exports = defineConfig({
       .loader('pug-plain-loader')
       .end();
   },
+  publicPath: process.env.NODE_ENV === 'production'
+  ? 'https://mywish.uz/'
+  : '/',
 })
